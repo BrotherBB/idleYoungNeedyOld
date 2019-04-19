@@ -1,6 +1,8 @@
-# 老菜鸟分析 Vue 的观察-订阅模式：数据变化之后是如何更新页面的呢？
+# 数据变化之后是如何更新页面的呢？
 
-假设 Vue 已经完成了页面初始渲染处于状态 A，现在进行了某些操作，调用了 `changeMessage` 方法，执行了 `this.message = 'New Hello Vue';` 语句，对 `message` 属性重新赋值了。那么接来，Vue 究竟会做些什么来让我们在页面上看到最新的 `New Hello Vue` 结果呢？下面将详细分析并附上流程渣图。
+假设 Vue 已经完成了页面初始渲染处于状态 A，现在进行了某些操作，调用了 `changeMessage` 方法，执行了 `this.message = 'New Hello Vue';` 语句，对 `message` 属性重新赋值了。那么接来，Vue 究竟会做些什么来让我们在页面上看到最新的 `New Hello Vue` 结果呢？下面将详细分析并附上流程渣图。  
+
+Vue 版本为 2.6.10  
 
 场景如下：
 
